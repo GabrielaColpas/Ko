@@ -1,0 +1,17 @@
+<div class="gabriela" data-bind="scope: 'base-layout'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "base-layout": {
+                        "component": "Study_KO/js/view/default-layout"
+                    }
+                }
+            }
+        }
+    }
+</script>
