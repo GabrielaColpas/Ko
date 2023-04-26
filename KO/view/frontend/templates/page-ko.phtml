@@ -1,4 +1,4 @@
-<div class="gabriela" data-bind="scope: 'base-layout'">
+<div data-bind="scope: 'base-layout'">
     <!-- ko template: getTemplate() --><!-- /ko -->
 </div>
 
@@ -8,7 +8,13 @@
             "Magento_Ui/js/core/app": {
                 "components": {
                     "base-layout": {
-                        "component": "Study_KO/js/view/default-layout"
+                        "component": "Study_KO/js/view/default-layout",
+                        "children" :{
+                            "buttonShowDate": {
+                                "component" : "Study_KO/js/action/button-show-date",
+                                "displayArea": "buttonShowDate"
+                            }
+                        }
                     }
                 }
             }

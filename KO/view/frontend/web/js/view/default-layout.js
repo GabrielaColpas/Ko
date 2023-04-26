@@ -10,8 +10,8 @@ define([
             template: 'Study_KO/view/textPresentation'
         },
 
-        initialize: function () {
-            this._super();
+        loremIpsum: function() {
+            return "i18n:'the end'"
         }
     });
 });
