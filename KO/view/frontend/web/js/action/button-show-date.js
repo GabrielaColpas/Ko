@@ -1,7 +1,7 @@
 define([
     'jquery',
     'ko',
-    'Study_KO/js/view/default-layout'
+    'Study_KO/js/view/default-layout',
 ], function ($, ko, layoutBase) {
     'use strict';
 
@@ -18,9 +18,10 @@ define([
         showDate: function() {
             let data = new Date;
             let today = data.getDate();
-            let month = data.getMonth();
+            let month = data.getMonth() + 1;
             let year = data.getFullYear();
             this.currentDate(today +'/'+ month +'/'+ year);
+
             return today;
         }
     });

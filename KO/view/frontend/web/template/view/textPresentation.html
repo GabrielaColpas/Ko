@@ -1,8 +1,14 @@
 <h3 data-bind="text: $t('Page example using KO in magento 2')"></h3>
 <span data-bind="i18n: 'Page for testing KO components'"></span>
-
+<hr>
 <div class="date">
     <!-- ko foreach: getRegion('buttonShowDate') -->
+        <!-- ko template: getTemplate() --> <!-- /ko -->
+    <!-- /ko-->
+</div>
+<hr>
+<div class="color-date">
+    <!-- ko foreach: getRegion('changeDateColor') -->
         <!-- ko template: getTemplate() --> <!-- /ko -->
     <!-- /ko-->
 </div>

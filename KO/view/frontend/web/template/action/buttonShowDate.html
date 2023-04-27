@@ -1,7 +1,8 @@
-<span data-bind="text: $t('Click on the button and see today')"></span>
+<span data-bind="text: $t('Click on the button and see todays date')"></span>
 <button type="submit" data-bind="click: function() { showDate(); }">
     <!--ko text: $t('Click here')--> <!-- /ko -->
 </button>
-<div style="width: 100px; height: 30px; border: 1px solid red;">
-    <div data-bind="text: currentDate"></div>
+
+<div data-bind="style: {width: '70px', height: '20px', border: '1px solid red', textAlign: 'center', padding: '10px'}">
+    <div id="current-date" data-bind="text: currentDate"></div>
 </div>
