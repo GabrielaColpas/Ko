@@ -1,22 +1,21 @@
 define([
     'jquery',
     'ko',
-    'Study_KO/js/view/default-layout'
-], function ($, ko, layoutBase) {
+    'uiComponent'
+], function ($, ko, uiComponent) {
     'use strict';
 
-    return layoutBase.extend({
+    return uiComponent.extend({
         defaults: {
             template: 'Study_KO/action/changeDateColor',
-            selectedColor: ko.observable('red')
+            changeColorDate: ko.observable(false),
+            textColor: ko.observable('')
         },
-
-        initialize: function () {
-            this._super();
-        },
-
+        
         selectColor: function(){
             let color = $('#input-color-date').val();
+            this.changeColorDate(true);
+            this.textColor(color)
             return this.changeColor(color);
         },
 

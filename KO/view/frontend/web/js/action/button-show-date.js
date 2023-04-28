@@ -1,18 +1,14 @@
 define([
     'jquery',
     'ko',
-    'Study_KO/js/view/default-layout',
-], function ($, ko, layoutBase) {
+    'uiComponent',
+], function ($, ko, uiComponent) {
     'use strict';
 
-    return layoutBase.extend({
+    return uiComponent.extend({
         defaults: {
             template: 'Study_KO/action/buttonShowDate',
             currentDate: ko.observable('')
-        },
-
-        initialize: function () {
-            this._super();
         },
 
         showDate: function() {

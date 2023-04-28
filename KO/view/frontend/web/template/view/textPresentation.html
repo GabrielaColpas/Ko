@@ -5,6 +5,10 @@
     <!-- ko foreach: getRegion('buttonShowDate') -->
         <!-- ko template: getTemplate() --> <!-- /ko -->
     <!-- /ko-->
+
+    <!-- ko scope: requestChild('changeCurrentDateColor') -->
+        <span data-bind="visible: changeColorDate, text: $t('Date color changed to color ') + textColor()"></span>
+    <!-- /ko-->
 </div>
 <hr>
 <div class="color-date">
@@ -12,3 +16,4 @@
         <!-- ko template: getTemplate() --> <!-- /ko -->
     <!-- /ko-->
 </div>
+<hr>

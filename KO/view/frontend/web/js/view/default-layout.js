@@ -1,17 +1,17 @@
 define([
     'jquery',
     'ko',
-    'uiComponent'
-],function($, ko, Component){
+    'uiComponent',
+],function($, ko, uiComponent){
     'use strict';
 
-    return Component.extend({
+    return uiComponent.extend({
         defaults: {
             template: 'Study_KO/view/textPresentation'
         },
 
-        loremIpsum: function() {
-            return "i18n:'the end'"
-        }
+        initialize: function() {
+            this._super();
+        },
     });
 });
