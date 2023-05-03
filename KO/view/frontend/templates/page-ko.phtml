@@ -12,11 +12,13 @@
                         "children" :{
                             "buttonShowCurrentDate": {
                                 "component" : "Study_KO/js/action/button-show-date",
-                                "displayArea": "buttonShowDate"
-                            },
-                            "changeCurrentDateColor": {
-                                "component": "Study_KO/js/action/change-date-color",
-                                "displayArea": "changeDateColor"
+                                "displayArea": "buttonShowDate",
+                                "children" : {
+                                    "changeCurrentDateColor": {
+                                        "component": "Study_KO/js/action/change-date-color",
+                                        "displayArea": "changeDateColor"
+                                    }
+                                }
                             }
                         }
                     }

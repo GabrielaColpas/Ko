@@ -1,8 +1,6 @@
 define([
-    'jquery',
-    'ko',
     'uiComponent',
-],function($, ko, uiComponent){
+],function(uiComponent){
     'use strict';
 
     return uiComponent.extend({

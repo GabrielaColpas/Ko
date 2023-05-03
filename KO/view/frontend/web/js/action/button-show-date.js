@@ -1,15 +1,15 @@
 define([
-    'jquery',
     'ko',
     'uiComponent'
-], function ($, ko, uiComponent) {
+], function (ko, uiComponent) {
     'use strict';
 
     return uiComponent.extend({
         defaults: {
             template: 'Study_KO/action/buttonShowDate',
             currentDate: ko.observable('Data'),
-            initialData: ko.observable(true)
+            initialData: ko.observable(true),
+            changeDataMessage: ko.observable(true)
         },
 
         showDate: function() {
@@ -19,6 +19,7 @@ define([
             let year = data.getFullYear();
             this.currentDate(today +'/'+ month +'/'+ year);
             this.initialData(false);
+            this.changeDataMessage(false);
 
             return today;
         }

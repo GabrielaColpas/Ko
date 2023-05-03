@@ -5,7 +5,16 @@
         <span data-bind="text: $t('Below, you can choose a date and interact with it. Lets start?')"></span>
     </div>
     <div data-bind="if: !initialData()">
-        <span data-bind="text: $t('Alright, now just change the color')"></span>
+        <!-- ko scope: requestChild('changeCurrentDateColor') -->
+            <div data-bind="ifnot: changeColorDate">
+                <span data-bind="text: $t('Alright, now just change the color')"></span>
+            </div>
+            <hr>
+            <div class="color-date">
+                <!-- ko template: getTemplate() --> <!-- /ko -->
+                <span data-bind="visible: changeColorDate, text: $t('Date color changed to color ') + textColor()"></span>
+            </div>
+        <!-- /ko-->
     </div>
 </div>
 <hr>
@@ -13,15 +22,4 @@
     <!-- ko foreach: getRegion('buttonShowDate') -->
         <!-- ko template: getTemplate() --> <!-- /ko -->
     <!-- /ko-->
-
-    <!-- ko scope: requestChild('changeCurrentDateColor') -->
-        <span data-bind="visible: changeColorDate, text: $t('Date color changed to color ') + textColor()"></span>
-    <!-- /ko-->
 </div>
-<hr>
-<div class="color-date">
-    <!-- ko foreach: getRegion('changeDateColor') -->
-        <!-- ko template: getTemplate() --> <!-- /ko -->
-    <!-- /ko-->
-</div>
-<hr>
