@@ -1,5 +1,13 @@
 <h3 data-bind="text: $t('Page example using KO in magento 2')"></h3>
 <span data-bind="i18n: 'Page for testing KO components'"></span>
+<div class="info-container" data-bind="scope: requestChild('buttonShowCurrentDate')">
+    <div data-bind="if: initialData">
+        <span data-bind="text: $t('Below, you can choose a date and interact with it. Lets start?')"></span>
+    </div>
+    <div data-bind="if: !initialData()">
+        <span data-bind="text: $t('Alright, now just change the color')"></span>
+    </div>
+</div>
 <hr>
 <div class="date">
     <!-- ko foreach: getRegion('buttonShowDate') -->
